@@ -6,7 +6,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* \
     && which cron \
     && rm -rf /etc/cron.*/*
-
+RUN apt-get install -y wget 
 COPY crontab /hello-cron
 COPY entrypoint.sh /entrypoint.sh
 
